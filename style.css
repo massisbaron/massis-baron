@@ -615,7 +615,7 @@ input, select, textarea { font: inherit; }
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   height: 100%;
   min-height: 320px;
 }
@@ -683,7 +683,7 @@ input, select, textarea { font: inherit; }
     max-width: 100%;
     max-height: calc(100svh - var(--header-h) - 120px);
     width: auto;
-    align-self: flex-end;
+    align-self: flex-start;
   }
 }
 
