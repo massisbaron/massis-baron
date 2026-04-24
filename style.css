@@ -684,7 +684,7 @@ input, select, textarea { font: inherit; }
     max-height: calc(100svh - var(--header-h) - 8px);
     width: auto;
     align-self: flex-end;
-    transform: translateY(-100px);
+    transform: translateY(-110px);
   }
 }
 
