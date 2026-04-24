@@ -9,7 +9,7 @@
 const CONFIG = {
   // Substitua pelo endpoint real do Formspree (formspree.io)
   // Ex: 'https://formspree.io/f/xabc1234'
-  FORM_ENDPOINT: 'https://formspree.io/f/SEU_ID_AQUI',
+  FORM_ENDPOINT: 'https://formspree.io/f/xvzdlagn',
 
   // Número WhatsApp (somente dígitos, com DDI)
   WPP_NUMBER: '5511999999999',
