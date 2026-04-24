@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Massis Baron — Gestão estratégica de tráfego pago para PMEs. Auditoria, setup e gestão completa de campanhas no Google Ads e Meta Ads. Mostre seu negócio para quem já quer comprar." />
+  <meta name="keywords" content="tráfego pago, gestão de tráfego, Google Ads, Meta Ads, Facebook Ads, Instagram Ads, consultoria tráfego pago, Massis Baron, agência tráfego pago" />
+  <meta name="author" content="Massis Baron" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0A" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Massis Baron — Gestão Estratégica de Tráfego Pago" />
+  <meta property="og:description" content="Mostre seu negócio para as pessoas certas no momento em que elas estão buscando. Estratégia, estrutura e gestão profissional de tráfego pago." />
+  <meta property="og:url" content="https://massisbaron.com.br" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Massis Baron — Tráfego Pago Estratégico" />
+  <meta name="twitter:description" content="Gestão profissional de tráfego pago para PMEs que levam crescimento a sério." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
+
+  <link rel="canonical" href="https://massisbaron.com.br" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Massis Baron — Gestão Estratégica de Tráfego Pago</title>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Massis Baron",
+    "description": "Gestão estratégica de tráfego pago para PMEs — auditoria, setup e gestão completa de campanhas no Google Ads e Meta Ads.",
+    "serviceType": ["Gestão de Tráfego Pago", "Google Ads", "Meta Ads", "Consultoria de Marketing Digital"],
+    "areaServed": { "@type": "Country", "name": "Brasil" },
+    "url": "https://massisbaron.com.br",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "Portuguese"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════
+       TRACKING — Inserir os snippets nas posições abaixo
+       ═══════════════════════════════════════════════════
+
+  ① Google Tag Manager (no <head>, antes de fechar):
+  Cole o snippet do GTM aqui ↓
+
+  ② Google Analytics 4 (caso não use GTM):
+  Cole o gtag.js aqui ↓
+
+  ③ Meta Pixel (cole aqui, dentro do <head>):
+  Cole o snippet do Pixel aqui ↓
+
+  ④ Microsoft Clarity (cole aqui, dentro do <head>):
+  Cole o snippet do Clarity aqui ↓
+  -->
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       Google Tag Manager (noscript) — logo após <body>:
+  Cole o snippet noscript do GTM aqui ↓
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- ────────────────────────────────────────────────
+       HEADER
+  ──────────────────────────────────────────────── -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#hero" class="nav-logo" aria-label="Massis Baron — voltar ao início">
+        <span class="logo-text">Massis<span class="logo-accent">Baron</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+        <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+
+      <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
+         class="btn btn-primary btn-sm nav-cta"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Falar pelo WhatsApp">
+        WhatsApp
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 1 — HERO
+    ════════════════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Apresentação">
+
+      <!-- Fundo animado -->
+      <div class="hero-bg" aria-hidden="true">
+        <canvas id="particles-canvas"></canvas>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="hero-grid-overlay"></div>
+      </div>
+
+      <div class="container hero-content">
+
+        <!-- Coluna de texto -->
+        <div class="hero-text">
+          <span class="badge reveal">Gestão Estratégica de Tráfego Pago</span>
+
+          <h1 class="hero-headline reveal">
+            Seu negócio na frente de<br />
+            <span class="text-gradient">quem já quer comprar</span>
+          </h1>
+
+          <p class="hero-sub reveal">
+            Estratégia, estrutura e gestão profissional de tráfego pago
+            para PMEs que levam crescimento a sério.
+          </p>
+
+          <div class="hero-ctas reveal">
+            <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
+               class="btn btn-primary btn-lg"
+               target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Falar pelo WhatsApp
+            </a>
+
+            <a href="#contato" class="btn btn-ghost btn-lg">
+              Solicitar análise gratuita
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-trust reveal" aria-label="Plataformas">
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Google Ads
+            </span>
+            <span class="trust-sep" aria-hidden="true">·</span>
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Meta Ads
+            </span>
+            <span class="trust-sep" aria-hidden="true">·</span>
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              YouTube Ads
+            </span>
+            <span class="trust-sep" aria-hidden="true">·</span>
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              LinkedIn Ads
+            </span>
+          </div>
+        </div><!-- /hero-text -->
+
+        <!-- Coluna visual — foto -->
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="assets/hero-photo.png"
+            alt="Massis Baron aponta para o headline da página"
+            class="hero-photo"
+            loading="eager"
+            decoding="async"
+            width="520"
+            height="600"
+          />
+        </div><!-- /hero-visual -->
+
+      </div>
+
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 2 — AUTORIDADE / MÉTODO
+    ════════════════════════════════════════════════ -->
+    <section id="autoridade" class="section-authority" aria-labelledby="authority-heading">
+      <div class="container">
+        <div class="authority-inner">
+          <div class="authority-text">
+            <span class="section-label reveal">Por que funciona</span>
+            <h2 class="section-title reveal" id="authority-heading">Método antes de mídia</h2>
+            <p class="section-body reveal">
+              Investir em tráfego sem estratégia é distribuir orçamento sem direção.
+              O trabalho começa antes da primeira campanha — com diagnóstico,
+              estrutura e clareza sobre onde você está e onde quer chegar.
+            </p>
+            <p class="section-body reveal">
+              Cada negócio tem um mercado, uma concorrência e um público específico.
+              A estratégia é construída em cima disso — não em cima de templates
+              que funcionam para qualquer um e não otimizam para ninguém.
+            </p>
+          </div>
+
+          <div class="authority-pillars">
+            <div class="pillar reveal">
+              <div class="pillar-number" aria-hidden="true">01</div>
+              <div class="pillar-content">
+                <h3>Diagnóstico</h3>
+                <p>Antes de qualquer anúncio, entendemos o negócio, o mercado e os objetivos com clareza.</p>
+              </div>
+            </div>
+            <div class="pillar reveal">
+              <div class="pillar-number" aria-hidden="true">02</div>
+              <div class="pillar-content">
+                <h3>Estrutura</h3>
+                <p>Campanhas construídas com rastreamento, segmentação e lógica — não no improviso.</p>
+              </div>
+            </div>
+            <div class="pillar reveal">
+              <div class="pillar-number" aria-hidden="true">03</div>
+              <div class="pillar-content">
+                <h3>Gestão Ativa</h3>
+                <p>Acompanhamento contínuo com otimização baseada em dados, não em intuição.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 3 — BENEFÍCIOS
+    ════════════════════════════════════════════════ -->
+    <section id="beneficios" class="section-benefits" aria-labelledby="benefits-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">O que muda</span>
+          <h2 class="section-title reveal" id="benefits-heading">Crescimento que você consegue entender e replicar</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+            </div>
+            <h3>Apareça para quem realmente importa</h3>
+            <p>Segmentação precisa para atingir o público certo no canal certo, no momento em que ele está pronto para comprar.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3>Previsibilidade no crescimento</h3>
+            <p>Campanhas estruturadas geram resultados consistentes — não picos seguidos de silêncio.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3>Clareza sobre o que acontece</h3>
+            <p>Relatórios objetivos e reuniões diretas. Você sempre sabe o que está acontecendo com seu investimento.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </div>
+            <h3>Menos desperdício, mais resultado</h3>
+            <p>Otimização contínua para que cada real investido em mídia trabalhe com mais eficiência.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Estratégia alinhada ao seu mercado</h3>
+            <p>Cada nicho tem suas particularidades. A estratégia é construída com base no seu mercado, não em fórmulas genéricas.</p>
+          </article>
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>Gestão por quem entende do negócio</h3>
+            <p>Não é só apertar botão. É entender o mercado, a concorrência e o objetivo — e trabalhar a partir disso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 4 — COMO FUNCIONA
+    ════════════════════════════════════════════════ -->
+    <section id="como-funciona" class="section-process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">O processo</span>
+          <h2 class="section-title reveal" id="process-heading">Como funciona na prática</h2>
+          <p class="section-desc reveal">Do primeiro contato até a gestão contínua — sem etapa escondida.</p>
+        </div>
+
+        <ol class="process-steps" role="list">
+          <li class="process-step reveal">
+            <div class="step-indicator" aria-hidden="true">
+              <div class="step-dot"><span>01</span></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h3>Diagnóstico</h3>
+              <p>Entendemos seu negócio, nicho, concorrência, histórico de campanhas e objetivos. Essa etapa define tudo que vem depois.</p>
+            </div>
+          </li>
+
+          <li class="process-step reveal">
+            <div class="step-indicator" aria-hidden="true">
+              <div class="step-dot"><span>02</span></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h3>Planejamento</h3>
+              <p>Definimos canais, estrutura de campanhas, verba de mídia recomendada e metas realistas com base em dados do mercado.</p>
+            </div>
+          </li>
+
+          <li class="process-step reveal">
+            <div class="step-indicator" aria-hidden="true">
+              <div class="step-dot"><span>03</span></div>
+              <div class="step-line"></div>
+            </div>
+            <div class="step-content">
+              <h3>Implementação</h3>
+              <p>Configuramos contas, rastreamentos, pixels e estrutura técnica completa. A base certa antes de qualquer verba ser investida.</p>
+            </div>
+          </li>
+
+          <li class="process-step reveal">
+            <div class="step-indicator" aria-hidden="true">
+              <div class="step-dot"><span>04</span></div>
+              <div class="step-line step-line--last"></div>
+            </div>
+            <div class="step-content">
+              <h3>Gestão e Otimização</h3>
+              <p>Acompanhamento contínuo, ajustes baseados em dados, relatórios periódicos e comunicação direta sobre o desempenho.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 5 — SERVIÇOS
+    ════════════════════════════════════════════════ -->
+    <section id="servicos" class="section-services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">O que ofereço</span>
+          <h2 class="section-title reveal" id="services-heading">Serviços</h2>
+          <p class="section-desc reveal">Cada modalidade foi pensada para um momento específico do negócio.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Auditoria -->
+          <article class="service-card reveal">
+            <div class="service-top">
+              <span class="service-tag">Diagnóstico</span>
+              <h3 class="service-title">Auditoria</h3>
+              <p class="service-desc">Para quem já investe em tráfego e quer entender por que o resultado não está aparecendo.</p>
+            </div>
+            <ul class="service-list" role="list">
+              <li>Análise completa das contas ativas</li>
+              <li>Identificação de gargalos e desperdícios</li>
+              <li>Diagnóstico técnico e estratégico</li>
+              <li>Relatório com recomendações objetivas</li>
+              <li>Reunião de apresentação dos achados</li>
+            </ul>
+            <div class="service-footer">
+              <p class="service-deliverable">Entregável: relatório detalhado + reunião</p>
+              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Auditoria%20de%20tráfego."
+                 class="btn btn-outline"
+                 target="_blank" rel="noopener noreferrer">
+                Saber mais
+              </a>
+            </div>
+          </article>
+
+          <!-- Setup Inicial — destaque -->
+          <article class="service-card service-card--featured reveal">
+            <div class="service-top">
+              <span class="service-tag service-tag--accent">Estrutura</span>
+              <h3 class="service-title">Setup Inicial</h3>
+              <p class="service-desc">Para quem ainda não investe em tráfego ou precisa reconstruir tudo do zero com estrutura profissional.</p>
+            </div>
+            <ul class="service-list" role="list">
+              <li>Criação e configuração das contas</li>
+              <li>Estruturação de campanhas</li>
+              <li>Instalação de pixels e rastreamentos</li>
+              <li>Configuração de públicos e segmentações</li>
+              <li>Orientação sobre verba inicial de mídia</li>
+            </ul>
+            <div class="service-footer">
+              <p class="service-deliverable">Entregável: conta configurada e pronta para rodar</p>
+              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20no%20Setup%20Inicial."
+                 class="btn btn-primary"
+                 target="_blank" rel="noopener noreferrer">
+                Saber mais
+              </a>
+            </div>
+          </article>
+
+          <!-- Gestão Completa -->
+          <article class="service-card reveal">
+            <div class="service-top">
+              <span class="service-tag">Parceria</span>
+              <h3 class="service-title">Gestão Completa</h3>
+              <p class="service-desc">Para quem quer crescer com consistência e prefere deixar a gestão na mão de um especialista.</p>
+            </div>
+            <ul class="service-list" role="list">
+              <li>Gestão mensal das campanhas</li>
+              <li>Otimização contínua baseada em dados</li>
+              <li>Relatórios periódicos objetivos</li>
+              <li>Suporte estratégico contínuo</li>
+              <li>Reuniões de alinhamento regulares</li>
+            </ul>
+            <div class="service-footer">
+              <p class="service-deliverable">Investimento: definido após análise do nicho e objetivos</p>
+              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Gestão%20Completa."
+                 class="btn btn-outline"
+                 target="_blank" rel="noopener noreferrer">
+                Saber mais
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 6 — DIFERENCIAIS
+    ════════════════════════════════════════════════ -->
+    <section id="diferenciais" class="section-differentials" aria-labelledby="differentials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Como o trabalho é feito</span>
+          <h2 class="section-title reveal" id="differentials-heading">O que faz a diferença</h2>
+        </div>
+
+        <div class="differentials-grid">
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Análise, não achismo</h3>
+              <p>Cada decisão de campanha é baseada em dados reais do seu mercado, não em feeling ou no que funcionou em outro nicho.</p>
+            </div>
+          </div>
+
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Relatórios que você entende</h3>
+              <p>Sem print de dashboard sem contexto. Os relatórios explicam o que aconteceu, por que aconteceu e o que vem a seguir.</p>
+            </div>
+          </div>
+
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Sem fórmulas prontas</h3>
+              <p>Cada negócio tem sua estratégia. O que funciona para um e-commerce de moda não funciona para um escritório de advocacia.</p>
+            </div>
+          </div>
+
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Comunicação direta</h3>
+              <p>Sem intermediários, sem respostas genéricas. A comunicação é clara e objetiva — sobre o que realmente importa.</p>
+            </div>
+          </div>
+
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Foco em resultado, não em volume</h3>
+              <p>O objetivo não é ter muitos anúncios ativos. É ter os anúncios certos gerando resultado real para o negócio.</p>
+            </div>
+          </div>
+
+          <div class="differential reveal">
+            <div class="diff-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Carteira seletiva de clientes</h3>
+              <p>Não é uma fábrica de atendimentos. A carteira é selecionada para garantir qualidade e atenção para cada cliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 7 — QUALIFICAÇÃO DO LEAD
+    ════════════════════════════════════════════════ -->
+    <section id="qualificacao" class="section-qualification" aria-labelledby="qual-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Alinhamento de expectativas</span>
+          <h2 class="section-title reveal" id="qual-heading">Para quem faz sentido</h2>
+          <p class="section-desc reveal">
+            Este trabalho é para negócios que entendem que tráfego pago é um investimento —
+            e que resultado consistente se constrói com estratégia, estrutura e tempo.
+          </p>
+        </div>
+
+        <div class="qualification-grid">
+          <div class="qual-card qual-card--yes reveal">
+            <div class="qual-header">
+              <div class="qual-icon qual-icon--yes" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h3>Faz sentido se você</h3>
+            </div>
+            <ul role="list">
+              <li>Tem produto ou serviço validado no mercado</li>
+              <li>Entende que resultado leva tempo e consistência</li>
+              <li>Está disposto a investir em mídia com seriedade</li>
+              <li>Busca uma parceria estratégica, não um fornecedor barato</li>
+              <li>Quer entender o processo e estar alinhado com ele</li>
+              <li>Tem clareza sobre seu público e diferencial</li>
+            </ul>
+          </div>
+
+          <div class="qual-card qual-card--no reveal">
+            <div class="qual-header">
+              <div class="qual-icon qual-icon--no" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </div>
+              <h3>Não é para você se</h3>
+            </div>
+            <ul role="list">
+              <li>Espera retorno imediato na primeira semana</li>
+              <li>Ainda não tem produto ou oferta definida</li>
+              <li>Está procurando o menor preço do mercado</li>
+              <li>Quer escalar sem ter clareza sobre o negócio</li>
+              <li>Não tem disposição para investir em mídia de forma consistente</li>
+              <li>Busca garantias de resultado antes de qualquer análise</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="qual-cta reveal">
+          <p>Não tem certeza se se encaixa? Me chame e conversamos sem compromisso.</p>
+          <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20entender%20se%20faz%20sentido%20trabalharmos%20juntos."
+             class="btn btn-primary"
+             target="_blank" rel="noopener noreferrer">
+            Vamos conversar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 8 — FAQ
+    ════════════════════════════════════════════════ -->
+    <section id="faq" class="section-faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label reveal">Tire suas dúvidas</span>
+          <h2 class="section-title reveal" id="faq-heading">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" role="list">
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+              <span>Quanto custa a gestão?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-1" hidden>
+              <p>O investimento em gestão varia conforme o escopo, os canais utilizados e os objetivos do negócio. Não trabalho com tabela fixa — o valor é definido após entender o que você precisa. Solicite uma análise sem compromisso para conversarmos sobre o seu caso específico.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+              <span>Quanto preciso investir em mídia?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-2" hidden>
+              <p>Não existe um valor mágico que funciona para todos os negócios. O orçamento ideal em mídia depende do seu nicho, da concorrência, dos objetivos e do prazo. Isso é definido no planejamento com transparência e baseado em dados reais do mercado — sem achismo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+              <span>Em quanto tempo vejo resultado?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-3" hidden>
+              <p>Depende do estágio da conta, do mercado e da estrutura. Geralmente as primeiras 4 a 8 semanas são de estruturação e aprendizado das campanhas. Resultados consistentes se constroem com o tempo — não com atalhos. Quem busca retorno garantido na primeira semana não vai encontrar isso aqui.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+              <span>Funciona para o meu nicho?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-4" hidden>
+              <p>A maioria dos nichos tem potencial real com tráfego pago. O que muda é a estratégia, os canais e a abordagem. Isso é avaliado no diagnóstico — sem resposta genérica. Se houver alguma incompatibilidade real, você sabe antes de qualquer investimento.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+              <span>Quais plataformas você trabalha?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-5" hidden>
+              <p>Google Ads, Meta Ads (Facebook e Instagram), YouTube Ads e LinkedIn Ads. A definição dos canais depende do perfil do negócio e do público-alvo — não adianta estar em tudo se seu cliente não está em tudo.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+              <span>Você faz os criativos dos anúncios?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-6" hidden>
+              <p>A estratégia, estrutura e gestão das campanhas estão incluídas. Para produção de criativos — imagens e vídeos — trabalhamos em parceria com profissionais especializados ou orientamos a equipe criativa do cliente quando ela já existe.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+              <span>Como funciona o acompanhamento?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-7" hidden>
+              <p>Relatórios periódicos e reuniões de alinhamento conforme o plano contratado. A comunicação é direta — sem intermediários e sem enrolação. Você sempre sabe o que está acontecendo com seu investimento e por quê.</p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+              <span>Como começo?</span>
+              <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-8" hidden>
+              <p>Me chame pelo WhatsApp ou preencha o formulário abaixo. Fazemos uma análise inicial sem compromisso para entender o seu negócio e verificar se faz sentido trabalharmos juntos. Se não fizer sentido, você sabe antes de gastar qualquer coisa.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════
+         SEÇÃO 9 — CTA FINAL + FORMULÁRIO
+    ════════════════════════════════════════════════ -->
+    <section id="contato" class="section-contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+
+          <!-- Texto + CTA WhatsApp -->
+          <div class="contact-text">
+            <span class="section-label reveal">Próximo passo</span>
+            <h2 class="section-title reveal" id="contact-heading">
+              Pronto para mostrar seu negócio<br />
+              <span class="text-gradient">para quem quer comprar?</span>
+            </h2>
+            <p class="section-body reveal">
+              Comece com uma análise. Sem compromisso, sem promessa vazia,
+              sem enrolação. Se fizer sentido, avançamos. Se não fizer, você sabe antes.
+            </p>
+            <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita%20do%20meu%20negócio."
+               class="btn btn-primary btn-lg reveal"
+               target="_blank" rel="noopener noreferrer">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              Falar pelo WhatsApp
+            </a>
+            <p class="contact-or reveal"><span>ou preencha o formulário ao lado</span></p>
+          </div>
+
+          <!-- Formulário -->
+          <div class="contact-form-wrapper reveal">
+            <form id="lead-form" class="lead-form" novalidate aria-label="Formulário de contato">
+
+              <!-- ════════════════════════════════════════
+                   FORMULÁRIO — ENDPOINT
+                   Para usar Formspree:
+                   1. Crie conta em formspree.io
+                   2. Crie um novo form
+                   3. Copie o endpoint (ex: https://formspree.io/f/xabc1234)
+                   4. No script.js, localize FORM_ENDPOINT e substitua
+                   ════════════════════════════════════════ -->
+
+              <div class="form-group">
+                <label for="nome">Nome <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" autocomplete="tel" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="negocio">Segmento do negócio <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="negocio" name="negocio" placeholder="Ex: clínica, imobiliária, e-commerce..." required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="objetivo">Objetivo principal <span class="required" aria-hidden="true">*</span></label>
+                <select id="objetivo" name="objetivo" required aria-required="true">
+                  <option value="">Selecione...</option>
+                  <option value="gerar-leads">Gerar mais leads</option>
+                  <option value="aumentar-vendas">Aumentar vendas</option>
+                  <option value="ampliar-alcance">Ampliar alcance da marca</option>
+                  <option value="otimizar-campanhas">Otimizar campanhas existentes</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Contexto adicional <span class="optional">(opcional)</span></label>
+                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre o negócio, situação atual e o que está buscando..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                <span class="btn-text">Solicitar análise gratuita</span>
+                <span class="btn-loading" aria-hidden="true" hidden>Enviando...</span>
+              </button>
+
+              <p class="form-privacy">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                Seus dados são confidenciais. Sem spam.
+              </p>
+
+              <div class="form-feedback form-success" id="form-success" hidden role="alert" aria-live="assertive">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong>Análise solicitada com sucesso!</strong>
+                  <p>Retorno em até 24 horas úteis.</p>
+                </div>
+              </div>
+
+              <div class="form-feedback form-error-msg" id="form-error" hidden role="alert" aria-live="assertive">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ────────────────────────────────────────────────
+       FOOTER
+  ──────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#hero" class="logo-text" aria-label="Massis Baron — voltar ao início">
+            Massis<span class="logo-accent">Baron</span>
+          </a>
+          <p>Gestão Estratégica de Tráfego Pago</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="footer-wpp" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2024</span> Massis Baron. Todos os direitos reservados.</p>
+        <a href="politica-de-privacidade.html" class="footer-privacy-link">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise."
+     class="wpp-float"
+     id="wpp-float"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Falar pelo WhatsApp"
+     title="Falar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
