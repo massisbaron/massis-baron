@@ -625,7 +625,7 @@ input, select, textarea { font: inherit; }
     min-height: unset;
     justify-content: flex-end;
     align-self: stretch;
-    padding-bottom: 80;
+    padding-bottom: 80px;
   }
 }
 
