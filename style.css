@@ -1620,6 +1620,11 @@ input, select, textarea { font: inherit; }
 
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
+
+  /* Mobile: esconde foto, texto ocupa coluna inteira */
+  .hero-visual { display: none; }
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-text { padding-block: var(--sp-10) var(--sp-12); }
 }
 
 /* Acessibilidade: redução de movimento */

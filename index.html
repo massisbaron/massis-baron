@@ -61,25 +61,32 @@
        TRACKING — Inserir os snippets nas posições abaixo
        ═══════════════════════════════════════════════════
 
-  ① Google Tag Manager (no <head>, antes de fechar):
-  Cole o snippet do GTM aqui ↓
+  ① Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TX3JM85W');</script>
 
-  ② Google Analytics 4 (caso não use GTM):
-  Cole o gtag.js aqui ↓
+  <!-- ② Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wiai8l693g");
+  </script>
 
-  ③ Meta Pixel (cole aqui, dentro do <head>):
+  <!-- ③ Meta Pixel (cole aqui, dentro do <head>):
   Cole o snippet do Pixel aqui ↓
-
-  ④ Microsoft Clarity (cole aqui, dentro do <head>):
-  Cole o snippet do Clarity aqui ↓
   -->
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════════
-       Google Tag Manager (noscript) — logo após <body>:
-  Cole o snippet noscript do GTM aqui ↓
-  ═══════════════════════════════════════════════════ -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX3JM85W"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ────────────────────────────────────────────────
        HEADER
@@ -97,7 +104,7 @@
         <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
 
-      <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
+      <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
          class="btn btn-primary btn-sm nav-cta"
          target="_blank" rel="noopener noreferrer"
          aria-label="Falar pelo WhatsApp">
@@ -140,12 +147,12 @@
           </h1>
 
           <p class="hero-sub reveal">
-            Estratégia, estrutura e gestão profissional de tráfego pago
-            para PMEs que levam crescimento a sério.
+            Pare de pagar por cliques que não convertem. Tráfego pago com
+            estratégia, estrutura e gestão para PMEs que querem resultado real.
           </p>
 
           <div class="hero-ctas reveal">
-            <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
+            <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita."
                class="btn btn-primary btn-lg"
                target="_blank" rel="noopener noreferrer">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
@@ -216,7 +223,7 @@
             <h2 class="section-title reveal" id="authority-heading">Método antes de mídia</h2>
             <p class="section-body reveal">
               Investir em tráfego sem estratégia é distribuir orçamento sem direção.
-              O trabalho começa antes da primeira campanha — com diagnóstico,
+              O trabalho começa antes da primeira campanha, com diagnóstico,
               estrutura e clareza sobre onde você está e onde quer chegar.
             </p>
             <p class="section-body reveal">
@@ -270,8 +277,8 @@
                 <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
               </svg>
             </div>
-            <h3>Apareça para quem realmente importa</h3>
-            <p>Segmentação precisa para atingir o público certo no canal certo, no momento em que ele está pronto para comprar.</p>
+            <h3>Apareça para quem já está pronto para comprar</h3>
+            <p>Segmentação precisa para colocar seu negócio na frente do público certo, no canal certo, no momento certo.</p>
           </article>
 
           <article class="benefit-card reveal">
@@ -335,7 +342,7 @@
         <div class="section-header">
           <span class="section-label reveal">O processo</span>
           <h2 class="section-title reveal" id="process-heading">Como funciona na prática</h2>
-          <p class="section-desc reveal">Do primeiro contato até a gestão contínua — sem etapa escondida.</p>
+          <p class="section-desc reveal">Do primeiro contato até a gestão contínua. Sem etapa escondida.</p>
         </div>
 
         <ol class="process-steps" role="list">
@@ -414,7 +421,7 @@
             </ul>
             <div class="service-footer">
               <p class="service-deliverable">Entregável: relatório detalhado + reunião</p>
-              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Auditoria%20de%20tráfego."
+              <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Auditoria%20de%20tráfego."
                  class="btn btn-outline"
                  target="_blank" rel="noopener noreferrer">
                 Saber mais
@@ -438,7 +445,7 @@
             </ul>
             <div class="service-footer">
               <p class="service-deliverable">Entregável: conta configurada e pronta para rodar</p>
-              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20no%20Setup%20Inicial."
+              <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20tenho%20interesse%20no%20Setup%20Inicial."
                  class="btn btn-primary"
                  target="_blank" rel="noopener noreferrer">
                 Saber mais
@@ -462,7 +469,7 @@
             </ul>
             <div class="service-footer">
               <p class="service-deliverable">Investimento: definido após análise do nicho e objetivos</p>
-              <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Gestão%20Completa."
+              <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20tenho%20interesse%20na%20Gestão%20Completa."
                  class="btn btn-outline"
                  target="_blank" rel="noopener noreferrer">
                 Saber mais
@@ -611,7 +618,7 @@
 
         <div class="qual-cta reveal">
           <p>Não tem certeza se se encaixa? Me chame e conversamos sem compromisso.</p>
-          <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20entender%20se%20faz%20sentido%20trabalharmos%20juntos."
+          <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20gostaria%20de%20entender%20se%20faz%20sentido%20trabalharmos%20juntos."
              class="btn btn-primary btn-lg"
              target="_blank" rel="noopener noreferrer">
             Vamos conversar
@@ -638,7 +645,7 @@
               <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-1" hidden>
-              <p>O investimento em gestão varia conforme o escopo, os canais utilizados e os objetivos do negócio. Não trabalho com tabela fixa — o valor é definido após entender o que você precisa. Solicite uma análise sem compromisso para conversarmos sobre o seu caso específico.</p>
+              <p>O investimento em gestão varia conforme o escopo, os canais utilizados e os objetivos do negócio. Não trabalho com tabela fixa. O valor é definido após entender o que você precisa. Solicite uma análise sem compromisso para conversarmos sobre o seu caso específico.</p>
             </div>
           </div>
 
@@ -648,7 +655,7 @@
               <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-2" hidden>
-              <p>Não existe um valor mágico que funciona para todos os negócios. O orçamento ideal em mídia depende do seu nicho, da concorrência, dos objetivos e do prazo. Isso é definido no planejamento com transparência e baseado em dados reais do mercado — sem achismo.</p>
+              <p>Não existe um valor mágico que funciona para todos os negócios. O orçamento ideal em mídia depende do seu nicho, da concorrência, dos objetivos e do prazo. Isso é definido no planejamento com transparência e baseado em dados reais do mercado. Sem achismo.</p>
             </div>
           </div>
 
@@ -658,7 +665,7 @@
               <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-3" hidden>
-              <p>Depende do estágio da conta, do mercado e da estrutura. Geralmente as primeiras 4 a 8 semanas são de estruturação e aprendizado das campanhas. Resultados consistentes se constroem com o tempo — não com atalhos. Quem busca retorno garantido na primeira semana não vai encontrar isso aqui.</p>
+              <p>Depende do estágio da conta, do mercado e da estrutura. Geralmente as primeiras 4 a 8 semanas são de estruturação e aprendizado das campanhas. Resultados consistentes se constroem com o tempo. Não existem atalhos. Quem busca retorno garantido na primeira semana não vai encontrar isso aqui.</p>
             </div>
           </div>
 
@@ -698,7 +705,7 @@
               <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer" id="faq-7" hidden>
-              <p>Relatórios periódicos e reuniões de alinhamento conforme o plano contratado. A comunicação é direta — sem intermediários e sem enrolação. Você sempre sabe o que está acontecendo com seu investimento e por quê.</p>
+              <p>Relatórios periódicos e reuniões de alinhamento conforme o plano contratado. A comunicação é direta, sem intermediários e sem enrolação. Você sempre sabe o que está acontecendo com seu investimento e por quê.</p>
             </div>
           </div>
 
@@ -734,7 +741,7 @@
               Comece com uma análise. Sem compromisso, sem promessa vazia,
               sem enrolação. Se fizer sentido, avançamos. Se não fizer, você sabe antes.
             </p>
-            <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita%20do%20meu%20negócio."
+            <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise%20gratuita%20do%20meu%20negócio."
                class="btn btn-primary btn-lg reveal"
                target="_blank" rel="noopener noreferrer">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -742,7 +749,7 @@
               </svg>
               Falar pelo WhatsApp
             </a>
-            <p class="contact-or reveal"><span>ou preencha o formulário ao lado</span></p>
+            <p class="contact-or reveal"><span>ou preencha o formulário</span></p>
           </div>
 
           <!-- Formulário -->
@@ -801,8 +808,8 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
-                <span class="btn-text">Solicitar análise gratuita</span>
-                <span class="btn-loading" aria-hidden="true" hidden>Enviando...</span>
+                <span class="btn-text">Quero minha análise gratuita</span>
+                <span class="btn-loading" aria-hidden="true" hidden>Enviando sua análise...</span>
               </button>
 
               <p class="form-privacy">
@@ -815,14 +822,14 @@
               <div class="form-feedback form-success" id="form-success" hidden role="alert" aria-live="assertive">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 <div>
-                  <strong>Análise solicitada com sucesso!</strong>
-                  <p>Retorno em até 24 horas úteis.</p>
+                  <strong>Recebemos sua solicitação!</strong>
+                  <p>Massis vai entrar em contato em até 24 horas úteis.</p>
                 </div>
               </div>
 
               <div class="form-feedback form-error-msg" id="form-error" hidden role="alert" aria-live="assertive">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+                <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999371175" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
               </div>
 
             </form>
@@ -855,7 +862,7 @@
         </nav>
 
         <div class="footer-social">
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="footer-wpp" aria-label="WhatsApp">
+          <a href="https://wa.me/5511999371175" target="_blank" rel="noopener noreferrer" class="footer-wpp" aria-label="WhatsApp">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
             </svg>
@@ -872,7 +879,7 @@
   </footer>
 
   <!-- Botão WhatsApp flutuante -->
-  <a href="https://wa.me/5511999999999?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise."
+  <a href="https://wa.me/5511999371175?text=Olá%20Massis%2C%20gostaria%20de%20solicitar%20uma%20análise."
      class="wpp-float"
      id="wpp-float"
      target="_blank" rel="noopener noreferrer"

@@ -12,7 +12,7 @@ const CONFIG = {
   FORM_ENDPOINT: 'https://formspree.io/f/xvzdlagn',
 
   // Número WhatsApp (somente dígitos, com DDI)
-  WPP_NUMBER: '5511999999999',
+  WPP_NUMBER: '5511999371175',
 };
 
 /* ─────────────────────────────────────────────────────
