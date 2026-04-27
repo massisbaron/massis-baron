@@ -1413,6 +1413,8 @@ input, select, textarea { font: inherit; }
 }
 
 /* Feedback do form */
+.form-feedback[hidden] { display: none; }
+
 .form-feedback {
   display: flex;
   align-items: flex-start;
@@ -1625,6 +1627,105 @@ input, select, textarea { font: inherit; }
   .hero-visual { display: none; }
   .hero-content { grid-template-columns: 1fr; }
   .hero-text { padding-block: var(--sp-10) var(--sp-12); }
+}
+
+/* ── Seção Diagnóstico ── */
+.section-diagnostico {
+  padding-block: var(--sp-24);
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.diagnostico-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-12);
+  align-items: start;
+  margin-top: var(--sp-12);
+}
+
+@media (max-width: 768px) {
+  .diagnostico-inner { grid-template-columns: 1fr; gap: var(--sp-8); }
+}
+
+.diagnostico-text p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--clr-text-muted);
+  margin-bottom: var(--sp-4);
+}
+
+.diagnostico-card {
+  border: 1px solid var(--clr-border-lt);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-8);
+  background: var(--clr-surface-2);
+}
+
+.diagnostico-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-6);
+  padding-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.diagnostico-label {
+  font-size: 0.75rem;
+  font-weight: var(--fw-semi);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-text-subtle);
+}
+
+.diagnostico-price {
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-text);
+  line-height: 1.1;
+}
+
+.diagnostico-price-note {
+  font-size: 0.8rem;
+  color: var(--clr-text-subtle);
+}
+
+.diagnostico-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.diagnostico-list li {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  padding-left: var(--sp-5);
+  position: relative;
+  line-height: 1.5;
+}
+
+.diagnostico-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--clr-orange);
+  opacity: 0.7;
+}
+
+.diagnostico-note {
+  font-size: 0.8rem;
+  color: var(--clr-text-subtle);
+  margin-bottom: var(--sp-6);
+  font-style: italic;
 }
 
 /* Acessibilidade: redução de movimento */
