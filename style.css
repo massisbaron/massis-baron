@@ -1636,6 +1636,117 @@ input, select, textarea { font: inherit; }
   .hero-text { padding-block: var(--sp-10) var(--sp-12); }
 }
 
+/* ─────────────────────────────────────────────────────
+   SEÇÃO RESULTADOS
+───────────────────────────────────────────────────── */
+.section-results {
+  padding-block: var(--sp-24);
+  background: var(--clr-surface);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* Grade de métricas */
+.results-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-16);
+}
+
+@media (min-width: 768px) {
+  .results-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.metric-card {
+  text-align: center;
+  padding: var(--sp-6) var(--sp-4);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--ease);
+}
+
+.metric-card:hover { border-color: var(--clr-border-lt); }
+
+.metric-value {
+  display: block;
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  font-weight: var(--fw-black);
+  color: var(--clr-orange);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: var(--sp-2);
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  line-height: 1.4;
+}
+
+/* Galeria de prints */
+.results-gallery {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .results-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .print-card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.print-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.print-wrap {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clr-border);
+  background: #fff;
+}
+
+.print-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Remove datas do eixo inferior dos gráficos Google Ads */
+.print-wrap--chart {
+  position: relative;
+  overflow: hidden;
+}
+
+.print-wrap--chart img {
+  /* Empurra a imagem levemente para cima e deixa a div cortar o rodapé */
+  margin-bottom: -8%;
+  display: block;
+  width: 100%;
+}
+
+.print-card figcaption {
+  font-size: 0.7875rem;
+  color: var(--clr-text-subtle);
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 599px) {
+  .section-results { padding-block: var(--sp-16); }
+}
+
 /* Acessibilidade: redução de movimento */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
