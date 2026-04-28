@@ -422,13 +422,11 @@ const CONFIG = { /* v2 */
         form.reset();
         if (successEl) successEl.hidden = false;
 
-        // Evento de conversão (se GTM/GA4/Pixel carregado)
+        // Evento de conversão GA4 (via GTM)
         if (typeof gtag === 'function') {
           gtag('event', 'lead_form_submit', { event_category: 'lead', event_label: data.objetivo });
         }
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-        }
+        // Meta Lead é disparado pelo GTM (tag "Meta - Lead Formulário")
       } else {
         throw new Error('Server error');
       }
