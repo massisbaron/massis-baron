@@ -6,7 +6,7 @@
 /* ─────────────────────────────────────────────────────
    CONFIGURAÇÃO — edite aqui
 ───────────────────────────────────────────────────── */
-const CONFIG = {
+const CONFIG = { /* v2 */
   // Web3Forms — chave de acesso (web3forms.com)
   WEB3FORMS_KEY: '257727df-c2aa-41cb-a81a-231f1eab73b2',
 
@@ -411,13 +411,14 @@ const CONFIG = {
       /* ════════════════════════════════════════════════════
          ENVIO — Web3Forms (web3forms.com)
          ════════════════════════════════════════════════════ */
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res  = await fetch('https://api.web3forms.com/submit', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify({ access_key: CONFIG.WEB3FORMS_KEY, ...data }),
       });
+      const json = await res.json();
 
-      if (res.ok) {
+      if (res.ok && json.success) {
         form.reset();
         if (successEl) successEl.hidden = false;
 
