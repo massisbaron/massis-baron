@@ -2503,11 +2503,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (errorEl)   errorEl.hidden   = true;
 
     try {
-      const data = new FormData(form);
-      const res  = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+      const payload = {
+        access_key: '257727df-c2aa-41cb-a81a-231f1eab73b2',
+        nome:      form.elements['nome']?.value.trim()     || '',
+        whatsapp:  form.elements['whatsapp']?.value.trim() || '',
+        email:     form.elements['email']?.value.trim()    || '',
+        negocio:   form.elements['negocio']?.value.trim()  || '',
+        objetivo:  form.elements['objetivo']?.value        || '',
+        mensagem:  form.elements['mensagem']?.value.trim() || '',
+      };
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(payload),
       });
       const json = await res.json().catch(() => ({}));
 
