@@ -638,7 +638,7 @@ section { position: relative; }
 .callout-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-xl);
   background: var(--clr-surface-2);
   border: 1px solid var(--clr-border-lt);
@@ -1402,7 +1402,36 @@ section { position: relative; }
   background: var(--clr-surface-2);
 }
 
+.form-submit-btn { width: 100%; margin-top: 6px; }
 .form-submit { width: 100%; margin-top: 6px; }
+.field-error { font-size: 0.78rem; color: #f87171; min-height: 1em; }
+.form-group input.error,
+.form-group select.error { border-color: #ef4444; }
+.form-feedback {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+.form-feedback[hidden] { display: none; }
+.form-success {
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.25);
+  color: #86efac;
+}
+.form-success svg { flex-shrink: 0; color: #22c55e; margin-top: 2px; }
+.form-success strong { display: block; color: #fff; margin-bottom: 2px; }
+.form-success p { margin: 0; opacity: 0.8; }
+.form-error-msg {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.25);
+  color: #fca5a5;
+}
+.form-error-msg svg { flex-shrink: 0; margin-top: 2px; }
+.form-error-msg p { margin: 0; }
+.form-error-msg a { color: var(--clr-orange); text-decoration: underline; }
+.optional { color: var(--clr-text-subtle); font-weight: 400; font-size: 0.85em; }
 .form-privacy {
   display: flex; align-items: center; gap: 8px;
   justify-content: center;
@@ -2238,77 +2267,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h3>Vamos conversar sobre o seu negócio</h3>
             <p>Conte um pouco sobre o contexto. Retorno em 24h úteis.</p>
           </div>
-          <form id="lead-form" class="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
-            <input type="hidden" name="access_key" value="257727df-c2aa-41cb-a81a-231f1eab73b2" />
-            <input type="hidden" name="subject" value="Novo lead — Massis Baron" />
-            <input type="hidden" name="from_name" value="Massis Baron Landing" />
-            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nome">Nome <span class="required">*</span></label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
-              </div>
-              <div class="form-group">
-                <label for="whatsapp">WhatsApp <span class="required">*</span></label>
-                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">E-mail <span class="required">*</span></label>
-              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="negocio">Segmento <span class="required">*</span></label>
-                <select id="negocio" name="negocio" required>
-                  <option value="">Selecione...</option>
-                  <option>Imobiliária / Construtora</option>
-                  <option>Turismo / Agência</option>
-                  <option>Clínica / Saúde</option>
-                  <option>E-commerce</option>
-                  <option>Serviços locais</option>
-                  <option>Educação / Cursos</option>
-                  <option>Advocacia / Consultoria</option>
-                  <option>Outro segmento</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="objetivo">Objetivo <span class="required">*</span></label>
-                <select id="objetivo" name="objetivo" required>
-                  <option value="">Selecione...</option>
-                  <option>Gerar mais leads</option>
-                  <option>Aumentar vendas</option>
-                  <option>Ampliar alcance</option>
-                  <option>Otimizar campanhas</option>
-                  <option>Outro</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="mensagem">Contexto adicional <span style="color: var(--clr-text-subtle); font-weight: 400;">(opcional)</span></label>
-              <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre o negócio, situação atual e o que está buscando..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg form-submit">
-              <span>Quero conversar com a Massis Baron</span>
-              <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-            <p class="form-privacy">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-              Seus dados são confidenciais. Sem spam, nunca.
-            </p>
+          <form id="lead-form" class="lead-form" novalidate aria-label="Formulário de contato">
 
-            <div class="lp-form-feedback lp-form-success" id="lp-form-success" hidden role="alert" aria-live="assertive">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <strong>Recebemos sua solicitação!</strong>
-                <p>Massis vai entrar em contato em até 24 horas úteis.</p>
+              <div class="form-group">
+                <label for="nome">Nome <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
               </div>
-            </div>
 
-            <div class="lp-form-feedback lp-form-error" id="lp-form-error" hidden role="alert" aria-live="assertive">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999371175" target="_blank" rel="noopener">WhatsApp</a>.</p>
-            </div>
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" autocomplete="tel" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required aria-required="true" />
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="negocio">Segmento do negócio <span class="required" aria-hidden="true">*</span></label>
+                <select id="negocio" name="negocio" required aria-required="true">
+                  <option value="">Selecione seu segmento...</option>
+                  <option value="imobiliaria">Imobiliária / Construtora</option>
+                  <option value="turismo">Turismo / Agência de viagens</option>
+                  <option value="clinica">Clínica / Saúde</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="servicos-locais">Serviços locais</option>
+                  <option value="educacao">Educação / Cursos</option>
+                  <option value="advocacia">Advocacia / Consultoria jurídica</option>
+                  <option value="outro">Outro segmento</option>
+                </select>
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="objetivo">Objetivo principal <span class="required" aria-hidden="true">*</span></label>
+                <select id="objetivo" name="objetivo" required aria-required="true">
+                  <option value="">Selecione...</option>
+                  <option value="gerar-leads">Gerar mais leads</option>
+                  <option value="aumentar-vendas">Aumentar vendas</option>
+                  <option value="ampliar-alcance">Ampliar alcance da marca</option>
+                  <option value="otimizar-campanhas">Otimizar campanhas existentes</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="field-error" aria-live="polite" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem">Contexto adicional <span class="optional">(opcional)</span></label>
+                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte um pouco sobre o negócio, situação atual e o que está buscando..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                <span class="btn-text">Quero conversar com a Massis Baron</span>
+                <span class="btn-loading" aria-hidden="true" hidden>Enviando...</span>
+              </button>
+
+              <p class="form-privacy">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                Seus dados são confidenciais. Sem spam.
+              </p>
+
+              <div class="form-feedback form-success" id="form-success" hidden role="alert" aria-live="assertive">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <div>
+                  <strong>Recebemos sua solicitação!</strong>
+                  <p>Massis vai entrar em contato em até 24 horas úteis.</p>
+                </div>
+              </div>
+
+              <div class="form-feedback form-error-msg" id="form-error" hidden role="alert" aria-live="assertive">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999371175" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+              </div>
 
           </form>
         </div>
@@ -2485,52 +2521,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 })();
 
-/* Form submit (basic) */
-(function(){
+/* Formulário — validação + envio (idêntico ao script.js da página principal) */
+(function initForm() {
   const form       = document.getElementById('lead-form');
   if (!form) return;
-  const successEl  = document.getElementById('lp-form-success');
-  const errorEl    = document.getElementById('lp-form-error');
 
+  const btnText    = form.querySelector('.btn-text');
+  const btnLoading = form.querySelector('.btn-loading');
+  const successEl  = document.getElementById('form-success');
+  const errorEl    = document.getElementById('form-error');
+  const submitBtn  = form.querySelector('.form-submit-btn');
+
+  /* Máscara de telefone */
+  const wppInput = document.getElementById('whatsapp');
+  if (wppInput) {
+    wppInput.addEventListener('input', () => {
+      let v = wppInput.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 6)      v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+      else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+      else if (v.length > 0) v = `(${v}`;
+      wppInput.value = v;
+    });
+  }
+
+  /* Regras de validação */
+  const rules = {
+    nome:     { validate: v => v.trim().length >= 2,                           msg: 'Informe seu nome completo.' },
+    whatsapp: { validate: v => v.replace(/\D/g,'').length >= 10,               msg: 'Informe um WhatsApp válido.' },
+    email:    { validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),   msg: 'Informe um e-mail válido.' },
+    negocio:  { validate: v => v.trim().length >= 2,                           msg: 'Informe o segmento do negócio.' },
+    objetivo: { validate: v => v !== '',                                        msg: 'Selecione um objetivo.' },
+  };
+
+  function showFieldError(input, msg) {
+    const span = input.closest('.form-group')?.querySelector('.field-error');
+    if (span) span.textContent = msg;
+    input.classList.toggle('error', !!msg);
+  }
+
+  Object.keys(rules).forEach(name => {
+    const input = form.elements[name];
+    if (!input) return;
+    input.addEventListener('blur',  () => showFieldError(input, rules[name].validate(input.value) ? '' : rules[name].msg));
+    input.addEventListener('input', () => { if (input.classList.contains('error')) showFieldError(input, rules[name].validate(input.value) ? '' : rules[name].msg); });
+  });
+
+  /* Envio */
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    const originalHTML = btn.innerHTML;
 
-    btn.disabled = true;
-    btn.innerHTML = '<span>Enviando…</span>';
-    if (successEl) successEl.hidden = true;
-    if (errorEl)   errorEl.hidden   = true;
+    let hasError = false;
+    Object.keys(rules).forEach(name => {
+      const input = form.elements[name];
+      if (!input) return;
+      const msg = rules[name].validate(input.value) ? '' : rules[name].msg;
+      showFieldError(input, msg);
+      if (msg) hasError = true;
+    });
+    if (hasError) { const first = form.querySelector('.error'); if (first) first.focus(); return; }
+
+    submitBtn.disabled = true;
+    if (btnText)    btnText.hidden    = true;
+    if (btnLoading) btnLoading.hidden = false;
+    if (successEl)  successEl.hidden  = true;
+    if (errorEl)    errorEl.hidden    = true;
 
     try {
-      const payload = {
-        access_key: '257727df-c2aa-41cb-a81a-231f1eab73b2',
-        nome:      form.elements['nome']?.value.trim()     || '',
-        whatsapp:  form.elements['whatsapp']?.value.trim() || '',
-        email:     form.elements['email']?.value.trim()    || '',
-        negocio:   form.elements['negocio']?.value.trim()  || '',
-        objetivo:  form.elements['objetivo']?.value        || '',
-        mensagem:  form.elements['mensagem']?.value.trim() || '',
-      };
       const res  = await fetch('https://api.web3forms.com/submit', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body:    JSON.stringify(payload),
+        body:    JSON.stringify({
+          access_key: '257727df-c2aa-41cb-a81a-231f1eab73b2',
+          nome:     form.elements['nome'].value.trim(),
+          whatsapp: form.elements['whatsapp'].value.trim(),
+          email:    form.elements['email'].value.trim(),
+          negocio:  form.elements['negocio'].value.trim(),
+          objetivo: form.elements['objetivo'].value,
+          mensagem: form.elements['mensagem']?.value.trim() || '',
+        }),
       });
-      const json = await res.json().catch(() => ({}));
-
-      if (res.ok && (json.success === true || json.success === 'true')) {
-        if (typeof fbq === 'function') fbq('track', 'Lead');
+      const json = await res.json();
+      if (res.ok && json.success) {
         form.reset();
         if (successEl) successEl.hidden = false;
-      } else {
-        throw new Error(json.message || 'Falha no envio');
-      }
-    } catch (err) {
+        if (typeof fbq === 'function') fbq('track', 'Lead');
+      } else { throw new Error('Server error'); }
+    } catch {
       if (errorEl) errorEl.hidden = false;
     } finally {
-      btn.disabled = false;
-      btn.innerHTML = originalHTML;
+      submitBtn.disabled = false;
+      if (btnText)    btnText.hidden    = false;
+      if (btnLoading) btnLoading.hidden = true;
     }
   });
 })();
