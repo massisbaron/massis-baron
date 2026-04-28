@@ -687,10 +687,9 @@ input, select, textarea { font: inherit; }
 @media (min-width: 900px) {
   .hero-photo {
     max-width: 100%;
-    max-height: calc(100svh - var(--header-h) - 120px);
+    max-height: calc(100svh - var(--header-h));
     width: auto;
-    align-self: flex-start;
-   margin-bottom: 60px;
+    align-self: flex-end;
   }
 }
 

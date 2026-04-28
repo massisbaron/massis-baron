@@ -7,9 +7,8 @@
    CONFIGURAÇÃO — edite aqui
 ───────────────────────────────────────────────────── */
 const CONFIG = {
-  // Substitua pelo endpoint real do Formspree (formspree.io)
-  // Ex: 'https://formspree.io/f/xabc1234'
-  FORM_ENDPOINT: 'https://formspree.io/f/xvzdlagn',
+  // Web3Forms — chave de acesso (web3forms.com)
+  WEB3FORMS_KEY: '257727df-c2aa-41cb-a81a-231f1eab73b2',
 
   // Número WhatsApp (somente dígitos, com DDI)
   WPP_NUMBER: '5511999371175',
@@ -410,17 +409,12 @@ const CONFIG = {
 
     try {
       /* ════════════════════════════════════════════════════
-         ENVIO — Formspree (padrão para hospedagem estática)
-         Substitua CONFIG.FORM_ENDPOINT pelo seu endpoint.
-
-         Alternativas:
-         - EmailJS: inicialize o SDK e chame emailjs.send()
-         - Backend próprio: troque a URL por sua rota API
+         ENVIO — Web3Forms (web3forms.com)
          ════════════════════════════════════════════════════ */
-      const res = await fetch(CONFIG.FORM_ENDPOINT, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body:    JSON.stringify(data),
+        body:    JSON.stringify({ access_key: CONFIG.WEB3FORMS_KEY, ...data }),
       });
 
       if (res.ok) {
