@@ -690,6 +690,7 @@ input, select, textarea { font: inherit; }
     max-height: calc(100svh - var(--header-h) - 120px);
     width: auto;
     align-self: flex-start;
+   margin-bottom: 60px;
   }
 }
 
