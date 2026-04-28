@@ -276,7 +276,18 @@ const CONFIG = { /* v2 */
 })();
 
 /* ─────────────────────────────────────────────────────
-   8. ANO NO FOOTER
+   8. RASTREAMENTO WHATSAPP — Meta Pixel Lead
+───────────────────────────────────────────────────── */
+(function initWppTracking() {
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'whatsapp_click' });
+    });
+  });
+})();
+
+/* ─────────────────────────────────────────────────────
+   9. ANO NO FOOTER
 ───────────────────────────────────────────────────── */
 (function setYear() {
   const el = document.getElementById('footer-year');
@@ -284,7 +295,7 @@ const CONFIG = { /* v2 */
 })();
 
 /* ─────────────────────────────────────────────────────
-   9. FORMULÁRIO — validação + envio
+   10. FORMULÁRIO — validação + envio
 ───────────────────────────────────────────────────── */
 (function initForm() {
   const form       = document.getElementById('lead-form');
@@ -423,12 +434,7 @@ const CONFIG = { /* v2 */
         if (successEl) successEl.hidden = false;
 
         // Eventos de conversão
-        if (typeof gtag === 'function') {
-          gtag('event', 'lead_form_submit', { event_category: 'lead', event_label: data.objetivo });
-        }
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-        }
+        if (typeof fbq === 'function') fbq('track', 'Lead');
       } else {
         throw new Error('Server error');
       }
