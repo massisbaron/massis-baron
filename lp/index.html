@@ -638,7 +638,7 @@ section { position: relative; }
 .callout-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-xl);
   background: var(--clr-surface-2);
   border: 1px solid var(--clr-border-lt);
@@ -1410,6 +1410,30 @@ section { position: relative; }
   color: var(--clr-text-subtle);
   text-align: center;
 }
+.lp-form-feedback {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  margin-top: 12px;
+}
+.lp-form-feedback[hidden] { display: none; }
+.lp-form-success {
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.25);
+  color: #86efac;
+}
+.lp-form-success svg { flex-shrink: 0; color: #22c55e; margin-top: 2px; }
+.lp-form-success strong { display: block; color: #fff; margin-bottom: 2px; }
+.lp-form-success p { margin: 0; opacity: 0.8; }
+.lp-form-error {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.25);
+  color: #fca5a5;
+}
+.lp-form-error svg { flex-shrink: 0; margin-top: 2px; }
+.lp-form-error p { margin: 0; }
+.lp-form-error a { color: var(--clr-orange); text-decoration: underline; }
 
 /* ─────────────────────────────────────────────
    Footer
@@ -2272,6 +2296,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
               Seus dados são confidenciais. Sem spam, nunca.
             </p>
+
+            <div class="lp-form-feedback lp-form-success" id="lp-form-success" hidden role="alert" aria-live="assertive">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Recebemos sua solicitação!</strong>
+                <p>Massis vai entrar em contato em até 24 horas úteis.</p>
+              </div>
+            </div>
+
+            <div class="lp-form-feedback lp-form-error" id="lp-form-error" hidden role="alert" aria-live="assertive">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <p>Algo deu errado. Tente pelo <a href="https://wa.me/5511999371175" target="_blank" rel="noopener">WhatsApp</a>.</p>
+            </div>
+
           </form>
         </div>
 
@@ -2449,38 +2487,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 /* Form submit (basic) */
 (function(){
-  const form = document.getElementById('lead-form');
+  const form       = document.getElementById('lead-form');
   if (!form) return;
+  const successEl  = document.getElementById('lp-form-success');
+  const errorEl    = document.getElementById('lp-form-error');
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = form.querySelector('.form-submit');
     const originalHTML = btn.innerHTML;
+
     btn.disabled = true;
     btn.innerHTML = '<span>Enviando…</span>';
+    if (successEl) successEl.hidden = true;
+    if (errorEl)   errorEl.hidden   = true;
+
     try {
       const data = new FormData(form);
-      const res = await fetch(form.action, {
+      const res  = await fetch(form.action, {
         method: 'POST',
         body: data,
         headers: { 'Accept': 'application/json' }
       });
       const json = await res.json().catch(() => ({}));
+
       if (res.ok && (json.success === true || json.success === 'true')) {
         if (typeof fbq === 'function') fbq('track', 'Lead');
-        btn.innerHTML = '<span>Recebido ✓</span>';
-        setTimeout(() => {
-          alert('Recebido! Massis vai entrar em contato em até 24h úteis.');
-          form.reset();
-          btn.disabled = false;
-          btn.innerHTML = originalHTML;
-        }, 600);
+        form.reset();
+        if (successEl) successEl.hidden = false;
       } else {
         throw new Error(json.message || 'Falha no envio');
       }
     } catch (err) {
+      if (errorEl) errorEl.hidden = false;
+    } finally {
       btn.disabled = false;
       btn.innerHTML = originalHTML;
-      alert('Algo deu errado. Tente pelo WhatsApp ou recarregue a página.');
     }
   });
 })();
