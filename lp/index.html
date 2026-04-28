@@ -638,12 +638,9 @@ section { position: relative; }
 .callout-photo {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(160deg, rgba(255,107,0,0.18) 0%, rgba(255,107,0,0.02) 60%),
-    repeating-linear-gradient(45deg, rgba(255,255,255,0.018) 0 12px, rgba(255,255,255,0.04) 12px 13px),
-    var(--clr-surface-2);
+  background: var(--clr-surface-2);
   border: 1px solid var(--clr-border-lt);
   overflow: hidden;
 }
@@ -1769,7 +1766,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <aside class="problem-photo-stack reveal">
           <div class="callout-photo" aria-hidden="true">
-            <img src="../assets/hero-photo.png" alt="Massis Baron" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;" loading="lazy" />
+            <img src="../assets/hero-photo.png" alt="Massis Baron" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;" loading="lazy" />
           </div>
           <div class="problem-callout">
             <p>Clique não paga conta. Estratégia e conversão sim. Cada campanha é construída em cima do seu negócio, não em cima de fórmula pronta.</p>
@@ -1859,11 +1856,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <figure class="print-card wide reveal">
           <div class="print-img-wrap">
-            <div class="stat stat-1"><div class="v">R$ 18,40</div><div class="l">CPL médio</div></div>
-            <div class="stat stat-2"><div class="v">3,8x</div><div class="l">ROAS</div></div>
             <img src="../assets/print-3.png" alt="Meta Ads — campanhas ativas" style="width:100%;display:block;" loading="lazy" />
           </div>
-          <figcaption><strong>Meta Ads</strong> · CPL médio e ROAS das campanhas ativas</figcaption>
+          <figcaption><strong>Meta Ads</strong> · campanhas ativas e resultados por conjunto</figcaption>
         </figure>
       </div>
 
